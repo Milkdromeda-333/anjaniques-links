@@ -184,9 +184,13 @@ img:hover {
   body {
     font-size: 1rem;
     padding: 1rem;
+<<<<<<< HEAD
     background-image: linear-gradient(rgba(0, 0, 0, 0.155), rgba(0, 0, 0, 0.444)), url(./images/pexels-luqmaan-tootla-2929189.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+=======
+    background-image: url(./images/pexels-luqmaan-tootla-2929189.jpg);
+>>>>>>> 626cbd7b42346f21af1cba504eb1b2b75dcb7424
   }
   h1 {
     font-size: 1.3rem;
