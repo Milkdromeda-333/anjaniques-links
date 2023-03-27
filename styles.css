@@ -76,7 +76,7 @@ body {
   color: white;
   height: 100vh;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.714)), url(../images/marek-piwnicki-FrQjnVgiFPQ-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.714)), url(./images/marek-piwnicki-FrQjnVgiFPQ-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -185,7 +185,7 @@ img:hover {
   body {
     font-size: 1rem;
     padding: 1rem;
-    background-image: url(../images/pexels-luqmaan-tootla-2929189.jpg);
+    background-image: url(./images/pexels-luqmaan-tootla-2929189.jpg);
   }
   h1 {
     font-size: 1.3rem;
