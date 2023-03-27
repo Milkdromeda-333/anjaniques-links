@@ -224,6 +224,7 @@ img:hover {
 @media screen and (max-width: 409px) {
   h1 {
     font-size: 1.1rem;
+    text-shadow: none;
   }
   .container--photo-credits {
     font-size: 0.8rem;
