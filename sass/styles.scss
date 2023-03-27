@@ -1,57 +1,47 @@
 @use "_resets";
 
-$font: 'DM Serif Display', serif;
+$font: 'Playfair Display', serif;
 $primary-color: black;
 $text-shadow: 1px 1px 2px $primary-color,
-0 0 1em pink,
-0 0 0.2em white;
+    0 0 1em rgba(255, 192, 203, 0.304),
+    0 0 0.2em rgba(255, 255, 255, 0.765);
 
-@mixin flexbox($direction, $justify, $align){
+@mixin flexbox($direction, $justify, $align) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
 }
 
-body{
+body {
     font-family: $font;
     font-size: 20px;
     color: white;
     height: 100vh;
 
     background-position: center;
-    background-image: url(../images/marek-piwnicki-FrQjnVgiFPQ-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.714)), url(../images/marek-piwnicki-FrQjnVgiFPQ-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-li {
-    list-style: none;
-    border: 1px solid white;
-    border-radius: 50%;
-    text-align: center;
-    margin: 10px;
-    padding: 15px;
-}
-
 a {
     color: white;
-    text-decoration: none;
-    
+    display: inline-block;
 }
 
-h1{
+h1 {
     margin: 0;
     text-shadow: $text-shadow;
     font-size: 2.5rem;
 }
 
-.content-container{
+.content-container {
     @include flexbox(column, center, end);
     height: 100%;
 }
 
-.content{
+.content {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
@@ -66,102 +56,135 @@ h1{
     gap: 1.5rem;
 }
 
-.content--header{
+.content--header {
     text-align: center;
     text-shadow: $text-shadow;
 }
 
-img{
+img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 100%;
+    transition: .4s ease-out;
 
     &:hover{
-        transition: .25s;
         transform: rotate(-10deg);
     }
 }
 
-ul {
+.links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
 }
 
-li{
-    transition: 0.50s;
+.links a {
+    list-style: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+    width: 130px;
+    padding-block: 1rem;
+    transition: 0.5s ease;
+    color: white;
+    text-decoration: none;
 
     &:hover {
 
-        box-shadow: inset 0 -6em 0 0 white;
+        outline: 5px white;
 
-        a {
-            color: black;
-        }
+        box-shadow: inset 0 -6.5em 0 0 rgba(255, 255, 255, 0.348);
 
         &:nth-child(2),
         &:nth-child(3) {
-            transform: rotate(10deg);
-            background-color: white;      
+            transform: rotate(10deg);      
         }
 
         &:nth-child(1),
         &:nth-child(4) {
             transform: rotate(-10deg);
+            
         }
     }
+
 }
 
-
-.container--photo-credits{
+.container--photo-credits {
     position: absolute;
     right: 0;
     bottom: 0;
     margin: 10px;
     padding: 5px;
-    font-size: .8rem;
+    font-size: .9rem;
 
-    a {
-        text-decoration: underline;
+    &.mobile{
+        display: none;
     }
 }
 
 @media screen and (max-width: 1026px){
-    h1{
+    h1 {
         font-size: 1.5rem;
     }
 
-        img {
-            width: 150px;
-            height: 150px;
-        }
+    img {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media screen and (max-width: 720px) {
-    body{
+    body {
         font-size: 1rem;
         padding: 1rem;
+        background-image: url(../images/pexels-luqmaan-tootla-2929189.jpg);
+    }
+
+    h1{
+        font-size: 1.3rem;
+    }
+
+    .container--photo-credits{
+        display: none;
+
+        &.mobile{
+            display: block;
+        }
     }
 
     ul {
-        // grid-template-columns: 1fr;
         padding: 0;
     }
 
-    li{
+    .links a {
         margin: 5px;
-        padding: 10px;
     }
 
-    .content{
+    .content {
         width: 100%;
         margin: 1rem;
         margin: 0 auto;
     }
 
-        img {
-            width: 100px;
-            height: 100px;
-        }
+    img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 409px) {
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .container--photo-credits {
+        font-size: .8rem;
+    }
+
+    .links a{
+        width: 100px;
+    }
+
 }
