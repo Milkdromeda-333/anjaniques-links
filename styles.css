@@ -71,12 +71,12 @@ select {
   }
 }
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Poiret One", serif;
   font-size: 20px;
   color: white;
   height: 100vh;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.714)), url(../images/marek-piwnicki-FrQjnVgiFPQ-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.714)), url(./images/marek-piwnicki-FrQjnVgiFPQ-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -88,7 +88,7 @@ a {
 
 h1 {
   margin: 0;
-  text-shadow: 1px 1px 2px black, 0 0 1em rgba(255, 192, 203, 0.304), 0 0 0.2em rgba(255, 255, 255, 0.765);
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
   font-size: 2.5rem;
 }
 
@@ -106,6 +106,7 @@ h1 {
   backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: auto;
   height: 100%;
   width: 50%;
   padding: 1rem;
@@ -118,7 +119,6 @@ h1 {
 
 .content--header {
   text-align: center;
-  text-shadow: 1px 1px 2px black, 0 0 1em rgba(255, 192, 203, 0.304), 0 0 0.2em rgba(255, 255, 255, 0.765);
 }
 
 img {
@@ -162,9 +162,8 @@ img:hover {
 
 .container--photo-credits {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 10px;
+  right: 16px;
+  bottom: 16px;
   padding: 5px;
   font-size: 0.9rem;
 }
@@ -185,7 +184,9 @@ img:hover {
   body {
     font-size: 1rem;
     padding: 1rem;
-    background-image: url(../images/pexels-luqmaan-tootla-2929189.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.155), rgba(0, 0, 0, 0.444)), url(./images/pexels-luqmaan-tootla-2929189.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   h1 {
     font-size: 1.3rem;
@@ -195,12 +196,19 @@ img:hover {
   }
   .container--photo-credits.mobile {
     display: block;
+    text-align: center;
   }
   ul {
     padding: 0;
   }
   .links a {
     margin: 5px;
+  }
+  .links a:nth-child(2):hover, .links a:nth-child(3):hover, .links a:nth-child(1):hover, .links a:nth-child(4):hover {
+    transform: none;
+  }
+  .links a:active {
+    box-shadow: inset 0 -6.5em 0 0 rgba(255, 255, 255, 0.348);
   }
   .content {
     width: 100%;

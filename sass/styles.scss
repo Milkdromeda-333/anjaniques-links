@@ -1,10 +1,7 @@
 @use "_resets";
 
-$font: 'Playfair Display', serif;
+$font: 'Poiret One', serif;
 $primary-color: black;
-$text-shadow: 1px 1px 2px $primary-color,
-    0 0 1em rgba(255, 192, 203, 0.304),
-    0 0 0.2em rgba(255, 255, 255, 0.765);
 
 @mixin flexbox($direction, $justify, $align) {
     display: flex;
@@ -32,7 +29,7 @@ a {
 
 h1 {
     margin: 0;
-    text-shadow: $text-shadow;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
     font-size: 2.5rem;
 }
 
@@ -47,6 +44,7 @@ h1 {
     backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: auto;
 
     height: 100%;
     width: 50%;
@@ -58,7 +56,6 @@ h1 {
 
 .content--header {
     text-align: center;
-    text-shadow: $text-shadow;
 }
 
 img {
@@ -90,10 +87,8 @@ img {
     color: white;
     text-decoration: none;
 
-    &:hover {
-
+    &:hover{
         outline: 5px white;
-
         box-shadow: inset 0 -6.5em 0 0 rgba(255, 255, 255, 0.348);
 
         &:nth-child(2),
@@ -112,9 +107,8 @@ img {
 
 .container--photo-credits {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 10px;
+    right: 16px;
+    bottom: 16px;
     padding: 5px;
     font-size: .9rem;
 
@@ -138,7 +132,9 @@ img {
     body {
         font-size: 1rem;
         padding: 1rem;
-        background-image: url(./images/pexels-luqmaan-tootla-2929189.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.155), rgba(0, 0, 0, 0.444)), url(./images/pexels-luqmaan-tootla-2929189.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     h1{
@@ -150,6 +146,7 @@ img {
 
         &.mobile{
             display: block;
+            text-align: center;
         }
     }
 
@@ -159,6 +156,17 @@ img {
 
     .links a {
         margin: 5px;
+        
+        &:nth-child(2):hover,
+        &:nth-child(3):hover,
+        &:nth-child(1):hover,
+        &:nth-child(4):hover {
+            transform: none;
+        }
+
+        &:active{
+            box-shadow: inset 0 -6.5em 0 0 rgba(255, 255, 255, 0.348);
+        }
     }
 
     .content {
@@ -185,6 +193,7 @@ img {
 
     .links a{
         width: 100px;
+
     }
 
 }
